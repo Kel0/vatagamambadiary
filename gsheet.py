@@ -4,8 +4,6 @@ from pathlib import Path
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
-from data_handler import get_deals
-
 ABS_PATH = Path().resolve()
 
 

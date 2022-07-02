@@ -15,7 +15,7 @@ def get_deals():
                 "ticker": deal["symbol_code"],
                 "openTime": deal["open_time"],
                 "direction": "LONG" if deal["side"] == "Покупка" else "SHORT",
-                "quantity": deal["quantity"],
+                "quantity": deal["max_quantity"],
                 "pnl_points": deal["pnl_points"],
                 "pnl_profit": round(float(profit) - float(fees), 2),
             }

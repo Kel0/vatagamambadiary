@@ -5,7 +5,7 @@ After=network.target
 
 [Service]
 Type=simple
-User=ubuntu
+User=root
 WorkingDirectory=/root/gits/vatagamambadiary
 Environment="PATH=/root/gits/vatagamambadiary/venv/bin:$PATH"
 ExecStart=/root/gits/vatagamambadiary/venv/bin/python /root/gits/vatagamambadiary/runner.py
