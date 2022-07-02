@@ -1,0 +1,16 @@
+[Unit]
+Description=pricing_app_alternative 'Pricing bet exporter'
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/root/gits/vatagamambadiary
+Environment="PATH=/root/gits/vatagamambadiary/venv/bin:$PATH"
+ExecStart=/root/gits/vatagamambadiary/venv/bin/python /root/gits/vatagamambadiary/runner.py
+RestartSec=5
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
